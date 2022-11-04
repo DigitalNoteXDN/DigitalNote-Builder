@@ -6,7 +6,7 @@ This is a project to eazily build the qt-wallet and the daemon staticly.
 
 First you must get msys2 installed on your windows.
 
-Once msys2 is installed you start SYS2 MINGW64 console.
+Once msys2 is installed you start MSYS2 MINGW64 console.
 
 First you need to update msys2 with the latest compilers and packages by executing.
 
@@ -39,7 +39,7 @@ And thats it! :D
 
 First you must get msys2 installed on your windows.
 
-Once msys2 is installed you start SYS2 MINGW32 console.
+Once msys2 is installed you start MSYS2 MINGW32 console.
 
 First you need to update msys2 with the latest compilers and packages by executing.
 
