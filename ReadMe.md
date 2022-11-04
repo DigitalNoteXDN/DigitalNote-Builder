@@ -1,6 +1,6 @@
 ## DigitalNote-Builder
 
-This is a project to eazily build the qt-wallet and the daemon staticly.
+This is a project to eazily build the qt-wallet and the deamon staticly.
 
 ## How to use (64 bits)
 
@@ -31,7 +31,7 @@ Once finished we take the DigitalNote project.
 
 Now we can compile the project.
 
-	compile_app.sh
+	./compile_app.sh
 
 And thats it! :D
 
@@ -64,7 +64,7 @@ Once finished we take the DigitalNote project.
 
 Now we can compile the project.
 
-	compile_app.sh
+	./compile_app.sh
 
 And thats it! :D
 
