@@ -1,5 +1,7 @@
 #! /usr/bin/bash
 
+mkdir libs
+
 ../compile/berkeleydb.sh
 ../compile/boost.sh 32
 ../compile/gmp.sh
