@@ -1,5 +1,6 @@
 #! /usr/bin/bash
 
+mkdir temp
 mkdir libs
 
 ../compile/berkeleydb.sh

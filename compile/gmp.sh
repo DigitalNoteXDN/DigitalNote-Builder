@@ -1,10 +1,11 @@
 #! /usr/bin/bash
 
-cd libs
+cd temp
 
 tar -I bzip2 -xvf ../../download/gmp-6.2.1.tar.bz2
 
 cd gmp-6.2.1
 
-./configure
+./configure --prefix=$PWD/../../libs/gmp-6.2.1
 make -j 4
+make install
