@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-export PATH="$PWD/libs/qt_static/bin:$PATH"
+export PATH="$PWD/libs/qt-5.15.7/bin:$PATH"
 
 cd DigitalNote-2
 
