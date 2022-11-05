@@ -62,6 +62,10 @@ Once finished we take the DigitalNote project.
 
 	git clone https://github.com/IamLupo/DigitalNote-2.git
 
+After we modify the DigitalNote_config.pri to patch boost suffix to 32 bits:
+
+	DIGITALNOTE_BOOST_SUFFIX          = -mgw12-mt-s-x32-1_80
+
 Now we can compile the project.
 
 	./compile_app.sh
