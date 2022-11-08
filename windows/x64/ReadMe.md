@@ -16,18 +16,18 @@ Once msys2 is up-to-date you can download the packages.
 
 When thats executed you will have a folder called "download" with all the packages.
 
-Now we download all the packages we can compile the libraries.
+Now we download all the packages we need the Digitalnote project
 
 	cd windows/x32
+	git clone https://github.com/IamLupo/DigitalNote-2.git
+
+Now we have everything we can compile the libraries.
+
 	./compile_libs.sh
 
 This will take a while to compile like take a coffe while this runs.
 
-Once finished we take the DigitalNote project.
-
-	git clone https://github.com/IamLupo/DigitalNote-2.git
-
-After we modify the DigitalNote-2/DigitalNote_config.pri to patch boost suffix to 32 bits:
+Now we modify the DigitalNote-2/DigitalNote_config.pri to patch boost suffix to 32 bits:
 
 	DIGITALNOTE_BOOST_SUFFIX          = -mgw12-mt-s-x32-1_80
 
