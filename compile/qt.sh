@@ -17,7 +17,7 @@ cp ../../../../patch/qwindowsguieventdispatcher_p.h qtbase/include/QtEventDispat
 
 cp ../../../../patch/qwindowsuiawrapper_p.h qtbase/include/QtWindowsUIAutomationSupport/5.15.7/QtWindowsUIAutomationSupport/private
 
-cp ../../../../patch/qiosurfacegraphicsbuffer.h qtbase\src\plugins\platforms\cocoa
+cp ../../../../patch/qiosurfacegraphicsbuffer.h qtbase/src/plugins/platforms/cocoa
 
 ./configure -static -release -opensource -confirm-license -prefix "$PWD/../../libs/qt-5.15.7" -qt-zlib -qt-libpng -qt-webp -qt-libjpeg -qt-freetype  -no-opengl -skip qt3d -skip qtactiveqt -skip qtandroidextras -skip qtcharts -skip qtconnectivity -skip qtdatavis3d -skip qtdeclarative -skip qtdoc -skip qtgamepad -skip qtlocation -skip qtlottie -skip qtmacextras -skip qtmultimedia -skip qtnetworkauth -skip qtpurchasing -skip qtquick3d -skip qtquickcontrols -skip qtquickcontrols2 -skip qtquicktimeline -skip qtremoteobjects -skip qtscript -skip qtsensors -skip qtspeech -skip qtsvg -skip qtwayland -skip qtwebglplugin -skip qtwebview -skip webengine -make libs -nomake tools -nomake examples -nomake tests $1
 make -j 8
