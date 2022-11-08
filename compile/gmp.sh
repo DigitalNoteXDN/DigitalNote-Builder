@@ -2,7 +2,7 @@
 
 cd temp
 
-tar -I bzip2 -xvf ../../../download/gmp-6.2.1.tar.bz2
+tar -xjvf ../../../download/gmp-6.2.1.tar.bz2
 
 cd gmp-6.2.1
 
