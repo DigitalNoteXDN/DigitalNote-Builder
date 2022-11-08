@@ -11,7 +11,7 @@ export LDFLAGS=-m32
 ../../compile/boost.sh "address-model=32 toolset=gcc"
 ../../compile/gmp.sh "--host=i686-linux-gnu"
 ../../compile/libevent.sh "--host=i686-linux-gnu"
-../../compile/miniupnpc.sh "build/libminiupnpc.a"
+../../compile/miniupnpc.sh "libminiupnpc.a"
 ../../compile/openssl.sh "linux-x86"
 ../../compile/qrencode.sh "--host=i686-linux-gnu"
 ../../compile/qt.sh "-platform linux-g++ -xplatform linux-g++-32"
