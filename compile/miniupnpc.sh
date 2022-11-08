@@ -2,7 +2,7 @@
 
 cd temp
 
-tar xvfz ../../download/miniupnpc-2.2.4.tar.gz
+tar xvfz ../../../download/miniupnpc-2.2.4.tar.gz
 
 cd miniupnpc-2.2.4
 
@@ -14,4 +14,4 @@ mkdir -p $INSTALLPREFIX/include/miniupnpc
 mkdir -p $INSTALLPREFIX/lib
 
 cp include/*h $INSTALLPREFIX/include/miniupnpc
-cp libminiupnpc.a $INSTALLPREFIX/lib/
+cp $1 $INSTALLPREFIX/lib/
