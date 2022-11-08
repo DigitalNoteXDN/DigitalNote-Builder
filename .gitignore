@@ -15,3 +15,7 @@ linux/aarch64/DigitalNote-2
 linux/aarch64/libs
 linux/aarch64/temp
 linux/aarch64/config
+macos/x64/DigitalNote-2
+macos/x64/temp
+macos/x64/libs
+.DS_Store
