@@ -7,7 +7,7 @@ mkdir -p libs
 ../../compile/boost.sh "address-model=64 toolset=gcc"
 ../../compile/gmp.sh
 ../../compile/libevent.sh
-../../compile/miniupnpc.sh "build/libminiupnpc.a"
+../../compile/miniupnpc.sh "libminiupnpc.a"
 ../../compile/openssl.sh "linux-x86_64"
 ../../compile/qrencode.sh
 ../../compile/qt.sh
