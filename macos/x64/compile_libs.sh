@@ -3,11 +3,7 @@
 mkdir -p temp
 mkdir -p libs
 
-##
-## https://community.oracle.com/tech/developers/discussion/3952592/bug-build-failure-on-linux-with-clang-libc-atomic-issues
-##	
-#bash ../../compile/berkeleydb.sh
-
+bash ../compile/berkeleydb.sh
 bash ../../compile/boost.sh "address-model=64 toolset=clang"
 bash ../../compile/gmp.sh
 bash ../../compile/libevent.sh
