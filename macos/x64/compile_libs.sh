@@ -3,7 +3,7 @@
 mkdir -p temp
 mkdir -p libs
 
-bash ../compile/berkeleydb.sh
+bash ../compile/berkeleydb.sh "build_unix"
 bash ../../compile/boost.sh "address-model=64 toolset=clang"
 bash ../../compile/gmp.sh
 bash ../../compile/libevent.sh

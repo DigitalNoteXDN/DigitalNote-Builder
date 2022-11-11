@@ -5,7 +5,7 @@ mkdir libs
 
 export TARGET_OS=NATIVE_WINDOWS
 
-../../compile/berkeleydb.sh "--enable-mingw"
+../../compile/berkeleydb.sh "build_windows" "--enable-mingw"
 ../../compile/boost.sh "toolset=gcc address-model=32"
 ../../compile/gmp.sh
 ../../compile/leveldb.sh

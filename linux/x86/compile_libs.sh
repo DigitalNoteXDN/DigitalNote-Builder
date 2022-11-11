@@ -7,7 +7,7 @@ export CFLAGS=-m32
 export CXXFLAGS=-m32
 export LDFLAGS=-m32
 
-../../compile/berkeleydb.sh "--host=i686-linux-gnu"
+../../compile/berkeleydb.sh "build_unix" "--host=i686-linux-gnu"
 ../../compile/boost.sh "address-model=32 toolset=gcc"
 ../../compile/gmp.sh "--host=i686-linux-gnu"
 ../../compile/libevent.sh "--host=i686-linux-gnu"
