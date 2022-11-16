@@ -1,8 +1,8 @@
-## Compile Windows (32 bits)
+## Compile Windows (64 bits)
 
 First you must get msys2 installed on your windows.
 
-Once msys2 is installed you start "MSYS2 MINGW32" console.
+Once msys2 is installed you start "MSYS2 MINGW64" console.
 
 First you need to update msys2 with the latest compilers and packages by executing.
 
@@ -18,7 +18,7 @@ When thats executed you will have a folder called "download" with all the packag
 
 Now we download all the packages we need the Digitalnote project
 
-	cd windows/x32
+	cd windows/x64
 	git clone https://github.com/IamLupo/DigitalNote-2.git
 
 Now we have everything we can compile the libraries.
@@ -27,9 +27,9 @@ Now we have everything we can compile the libraries.
 
 This will take a while to compile like take a coffe while this runs.
 
-Now we modify the DigitalNote-2/DigitalNote_config.pri to patch boost suffix to 32 bits:
+Once finished we take the DigitalNote project.
 
-	DIGITALNOTE_BOOST_SUFFIX          = -mgw12-mt-s-x32-1_80
+	git clone https://github.com/IamLupo/DigitalNote-2.git
 
 Now we can compile the project.
 
