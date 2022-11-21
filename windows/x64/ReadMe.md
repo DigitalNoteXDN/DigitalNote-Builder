@@ -27,12 +27,10 @@ Now we have everything we can compile the libraries.
 
 This will take a while to compile like take a coffe while this runs.
 
-Once finished we take the DigitalNote project.
-
-	git clone https://github.com/IamLupo/DigitalNote-2.git
-
-Now we can compile the project.
+Once finished we can compile the project.
 
 	./compile_app.sh
 
 And thats it! :D
+
+PS: When everything is done there is a temp folder. This can be removed.

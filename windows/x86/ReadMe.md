@@ -36,3 +36,5 @@ Now we can compile the project.
 	./compile_app.sh
 
 And thats it! :D
+
+PS: When everything is done there is a temp folder. This can be removed.
