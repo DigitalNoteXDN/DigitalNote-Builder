@@ -10,4 +10,4 @@ mkdir -p libs
 ../../compile/miniupnpc.sh "libminiupnpc.a"
 ../../compile/openssl.sh "linux-x86_64"
 ../../compile/qrencode.sh
-../../compile/qt.sh
+../../compile/qt.sh "-bundled-xcb-xinput -fontconfig -system-freetype"
