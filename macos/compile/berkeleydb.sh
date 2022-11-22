@@ -6,7 +6,7 @@ tar xvfz ../../../download/db-6.2.32.NC.tar.gz
 
 cd db-6.2.32.NC
 
-patch -s -p0 < ../../../patch/patch-src_dbinc_atomic.h
+patch -s -p0 < ../../../../patch/patch-src_dbinc_atomic.h
 
 cd $1
 
