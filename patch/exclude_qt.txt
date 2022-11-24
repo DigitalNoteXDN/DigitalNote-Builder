@@ -24,6 +24,9 @@
 */qtsvg
 */qtwayland
 */qtwebglplugin
+*/qtvirtualkeyboard
+*/qtwebchannel
+*/qtwebsockets
 */qtwebview
 */qtwebengine
 
