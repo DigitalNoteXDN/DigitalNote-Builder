@@ -9,13 +9,13 @@ export CXX=aarch64-linux-gnu-g++
 
 echo 'using gcc : aarch64 : aarch64-linux-gnu-g++ ;' > config/user-config.jam
 
-../../compile/berkeleydb.sh "build_unix" "--host aarch64-linux-gnu"
-../../compile/boost.sh "--user-config=../../config/user-config.jam toolset=gcc-aarch64 architecture=arm address-model=64 target-os=linux"
-../../compile/gmp.sh "--host aarch64-linux-gnu"
-../../compile/libevent.sh "--host aarch64-linux-gnu"
-../../compile/miniupnpc.sh "libminiupnpc.a"
-../../compile/openssl.sh "linux-aarch64"
-../../compile/qrencode.sh  "--host aarch64-linux-gnu"
-../../compile/qt.sh "-platform linux-g++ -xplatform linux-aarch64-gnu-g++"
-../../compile/secp256k1.sh "--host=i686-linux-gnu"
-../../compile/leveldb.sh
+../../compile/berkeleydb.sh "build_unix" "--host aarch64-linux-gnu" $1
+../../compile/boost.sh "--user-config=../../config/user-config.jam toolset=gcc-aarch64 architecture=arm address-model=64 target-os=linux $1"
+../../compile/gmp.sh "--host aarch64-linux-gnu" $1
+../../compile/leveldb.sh $1
+../../compile/libevent.sh "--host aarch64-linux-gnu" $1
+../../compile/miniupnpc.sh "libminiupnpc.a" $1
+../../compile/openssl.sh "linux-aarch64" $1
+../../compile/qrencode.sh  "--host aarch64-linux-gnu" $1
+../../compile/secp256k1.sh "--host=i686-linux-gnu" $1
+../../compile/qt.sh "-platform linux-g++ -xplatform linux-aarch64-gnu-g++" $1

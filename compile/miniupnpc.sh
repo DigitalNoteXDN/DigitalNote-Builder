@@ -6,7 +6,7 @@ tar xvfz ../../../download/miniupnpc-2.2.4.tar.gz
 
 cd miniupnpc-2.2.4
 
-make -f Makefile.mingw libminiupnpc.a
+make -f Makefile.mingw libminiupnpc.a $2
 
 INSTALLPREFIX=$PWD/../../libs/miniupnpc-2.2.4
 

@@ -19,14 +19,14 @@ Now that we downloaded all the packages, we need the DigitalNote project
 
 Now we have everything we can compile the libraries.
 
-	bash compile_libs.sh
+	bash compile_libs.sh "-j 4"
 
 This will take a while to compile like take a coffee while this runs.
 
 Now we can compile the project.
 
-	bash compile_app.sh
-	bash compile_daemon.sh
+	bash compile_app.sh "-j 4"
+	bash compile_daemon.sh "-j 4"
 
 Once the app is created we can deploy the DigitalNote-QT version.
 

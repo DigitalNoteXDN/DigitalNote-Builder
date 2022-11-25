@@ -8,5 +8,5 @@ cd libevent-2.1.12-stable
 
 ./autogen.sh
 ./configure --disable-openssl --prefix=$PWD/../../libs/libevent-2.1.12-stable $1
-make -j 4
+make $2
 make install

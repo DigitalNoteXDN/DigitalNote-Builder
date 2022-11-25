@@ -8,4 +8,4 @@ cd DigitalNote-2/src/secp256k1/
 
 make clean
 
-make -j 4
+make $2

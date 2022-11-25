@@ -23,7 +23,7 @@ Now we download all the packages we need the Digitalnote project
 
 Now we have everything we can compile the libraries.
 
-	./compile_libs.sh
+	./compile_libs.sh "-j 4"
 
 This will take a while to compile like take a coffe while this runs.
 
@@ -33,7 +33,8 @@ Now we modify the DigitalNote-2/DigitalNote_config.pri to patch boost suffix to 
 
 Now we can compile the project.
 
-	./compile_app.sh
+	./compile_daemon.sh  "-j 4"
+	./compile_app.sh  "-j 4"
 
 And thats it! :D
 

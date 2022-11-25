@@ -3,13 +3,13 @@
 mkdir -p temp
 mkdir -p libs
 
-bash ../compile/berkeleydb.sh "build_unix"
-bash ../../compile/boost.sh "address-model=64 toolset=clang"
-bash ../../compile/gmp.sh
-bash ../../compile/libevent.sh
-bash ../../compile/miniupnpc.sh "libminiupnpc.a"
-bash ../../compile/openssl.sh "darwin64-x86_64-cc"
-bash ../../compile/qrencode.sh
-bash ../../compile/qt.sh
-bash ../../compile/leveldb.sh
-bash ../../compile/secp256k1.sh
+bash ../../compile/berkeleydb.sh "build_unix" "" $1
+bash ../../compile/boost.sh "address-model=64 toolset=clang $1"
+bash ../../compile/gmp.sh "" $1
+bash ../../compile/leveldb.sh $1
+bash ../../compile/libevent.sh "" $1
+bash ../../compile/miniupnpc.sh "libminiupnpc.a" $1
+bash ../../compile/openssl.sh "darwin64-x86_64-cc" $1
+bash ../../compile/qrencode.sh "" $1
+bash ../../compile/secp256k1.sh "" $1
+bash ../../compile/qt.sh "" $1
