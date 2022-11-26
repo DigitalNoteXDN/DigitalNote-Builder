@@ -6,7 +6,7 @@
 ##   https://fossies.org/linux/misc/db-18.1.40.tar.gz
 ##
 
-#! /usr/bin/bash
+#! /usr/bin/env bash
 
 cd temp
 

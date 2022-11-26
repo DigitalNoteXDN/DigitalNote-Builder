@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /usr/bin/env bash
 
 export PATH="$PWD/libs/qt-5.15.7/bin:$PATH"
 
