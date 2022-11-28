@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /usr/bin/env bash
 
 cd DigitalNote-2/src/secp256k1/
 

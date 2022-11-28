@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /usr/bin/env bash
 
 sudo apt install g++-aarch64-linux-gnu
 sudo apt-get install libfreetype6 libfreetype6-dev libfreetype-dev
