@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+sudo apt-get install gcc g++ make autoconf libtool
 
 sudo apt-get install libfreetype6 libfreetype6-dev libfreetype-dev
 sudo apt-get install libfontconfig1 libfontconfig1-dev

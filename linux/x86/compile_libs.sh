@@ -16,4 +16,4 @@ export LDFLAGS=-m32
 ../../compile/openssl.sh "linux-x86" $1
 ../../compile/qrencode.sh "--host=i686-linux-gnu" $1
 ../../compile/secp256k1.sh "--host=i686-linux-gnu" $1
-../../compile/qt.sh "-platform linux-g++ -xplatform linux-g++-32" $1
+../../compile/qt.sh "-platform linux-g++ -xplatform linux-g++-32 -bundled-xcb-xinput -fontconfig -system-freetype" ""
