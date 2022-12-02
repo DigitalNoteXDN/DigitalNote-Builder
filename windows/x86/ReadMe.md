@@ -2,23 +2,31 @@
 
 First you must get msys2 installed on your windows.
 
-Once msys2 is installed you start "MSYS2 MINGW32" console.
+	https://www.msys2.org/
 
-First you need to update msys2 with the latest compilers and packages by executing.
+Once msys2 is installed it start "MSYS2 UCRT64" console. Close this window.
+Click windows symbol(left bottom) and search for "MSYS2 MINGW32" and start the console.
 
-	cd windows
-	./msys2_update.sh
+First we will patch MSYS2 with the latest updates:
 
-Once msys2 is up-to-date you can download the packages.
+	pacman -Syu
 
-	cd ..
+After the upgrade it ask to restart "MSYS2 MINGW32".
+
+Once MSYS2 is up-to-date you can download the libraries.
+
+	cd /c/Users/iamlupo/Desktop/DigitalNote-Builder
 	./download.sh
 
-When thats executed you will have a folder called "download" with all the packages.
+When thats executed you will have a folder called "download" with all the libraries.
 
-Now we download all the packages we need the Digitalnote project
+Once thats done we can install the latest MSYS2 packages by executing.
 
-	cd windows/x32
+	cd windows/x86
+	./update.sh
+
+Now we have all the libraries we need the Digitalnote project
+
 	git clone https://github.com/IamLupo/DigitalNote-2.git
 
 Now we have everything we can compile the libraries.
@@ -31,7 +39,7 @@ Now we modify the DigitalNote-2/DigitalNote_config.pri to patch boost suffix to 
 
 	DIGITALNOTE_BOOST_SUFFIX          = -mgw12-mt-s-x32-1_80
 
-Now we can compile the project.
+Once finished we can compile the project.
 
 	./compile_daemon.sh  "-j 4"
 	./compile_app.sh  "-j 4"
