@@ -27,7 +27,7 @@ Once thats done, we can install the latest MSYS2 packages by executing.
 
 Now we have all the libraries we need for the Digitalnote project.
 
-	git clone https://github.com/IamLupo/DigitalNote-2.git
+	git clone https://github.com/DigitalNoteXDN/DigitalNote-2.git
 
 Now that we have everything, we can compile the libraries.
 

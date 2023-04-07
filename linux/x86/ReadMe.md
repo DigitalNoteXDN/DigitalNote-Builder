@@ -2,7 +2,7 @@
 
 First, you get the builder's project.
 
-	git clone https://gitlab.ludoruisch.nl/root/DigitalNote-Builder.git
+	git clone https://github.com/DigitalNoteXDN/DigitalNote-Builder.git
 	cd DigitalNote-Builder
 
 Then download all the library packages.
@@ -18,7 +18,7 @@ Once thats done, we can install the latest apt-get packages.
 
 Now we have all the libraries we need for the Digitalnote project.
 
-	git clone https://github.com/IamLupo/DigitalNote-2.git
+	git clone https://github.com/DigitalNoteXDN/DigitalNote-2.git
 
 Now that we have everything, we can compile the libraries.
 
