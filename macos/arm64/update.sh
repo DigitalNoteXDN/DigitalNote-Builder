@@ -5,3 +5,4 @@ brew install autoconf
 brew install automake
 brew install libtool
 brew install boost
+brew install gmp
