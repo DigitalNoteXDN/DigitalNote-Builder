@@ -11,6 +11,24 @@ sudo apt-get install -y \
     crossbuild-essential-arm64 \
     make autoconf libtool
 
+# Configure apt for arm64 multiarch.
+# Ubuntu's main archive hosts only amd64/i386 — arm64 packages live on
+# ports.ubuntu.com. We constrain existing entries to amd64 and add arm64
+# entries pointing at ports. Without this, apt update tries to fetch
+# arm64 indexes from the main archive and gets 404s.
+sudo sed -i 's|^deb http|deb [arch=amd64] http|' /etc/apt/sources.list
+if [ -d /etc/apt/sources.list.d ]; then
+    sudo sed -i 's|^deb http|deb [arch=amd64] http|' /etc/apt/sources.list.d/*.list 2>/dev/null || true
+fi
+# Detect codename so this works on jammy/noble/etc. without editing.
+CODENAME=$(. /etc/os-release && echo "$VERSION_CODENAME")
+printf '%s\n' \
+    "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports/ ${CODENAME} main restricted universe multiverse" \
+    "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports/ ${CODENAME}-updates main restricted universe multiverse" \
+    "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports/ ${CODENAME}-backports main restricted universe multiverse" \
+    "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports/ ${CODENAME}-security main restricted universe multiverse" \
+    | sudo tee /etc/apt/sources.list.d/arm64-ports.list >/dev/null
+
 # Enable arm64 multiarch (no-op if already enabled)
 sudo dpkg --add-architecture arm64
 sudo apt-get update -qq
