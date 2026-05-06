@@ -18,10 +18,10 @@ sudo apt-get install -y \
 # 22.04+) and add arm64 sources pointing at ports.
 #
 # Patch one-line .list format
-sudo sed -i -E 's|^(deb )(\[[^]]*\] )?(http)|\1[arch=amd64] \3|' /etc/apt/sources.list 2>/dev/null || true
+sudo sed -i -E 's|^deb (\[[^]]*\] )?([^ ])|deb [arch=amd64] \2|' /etc/apt/sources.list 2>/dev/null || true
 for f in /etc/apt/sources.list.d/*.list; do
     [ -e "$f" ] || continue
-    sudo sed -i -E 's|^(deb )(\[[^]]*\] )?(http)|\1[arch=amd64] \3|' "$f"
+    sudo sed -i -E 's|^deb (\[[^]]*\] )?([^ ])|deb [arch=amd64] \2|' "$f"
 done
 # Patch deb822 .sources format
 for f in /etc/apt/sources.list.d/*.sources; do
