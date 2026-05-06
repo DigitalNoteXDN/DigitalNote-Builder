@@ -13,14 +13,24 @@ sudo apt-get install -y \
 
 # Configure apt for arm64 multiarch.
 # Ubuntu's main archive hosts only amd64/i386 — arm64 packages live on
-# ports.ubuntu.com. We constrain existing entries to amd64 and add arm64
-# entries pointing at ports. Without this, apt update tries to fetch
-# arm64 indexes from the main archive and gets 404s.
-sudo sed -i 's|^deb http|deb [arch=amd64] http|' /etc/apt/sources.list
-if [ -d /etc/apt/sources.list.d ]; then
-    sudo sed -i 's|^deb http|deb [arch=amd64] http|' /etc/apt/sources.list.d/*.list 2>/dev/null || true
-fi
-# Detect codename so this works on jammy/noble/etc. without editing.
+# ports.ubuntu.com. Constrain existing sources to amd64 (handling both
+# old-style .list files and the deb822 .sources format used by Ubuntu
+# 22.04+) and add arm64 sources pointing at ports.
+#
+# Patch one-line .list format
+sudo sed -i -E 's|^(deb )(\[[^]]*\] )?(http)|\1[arch=amd64] \3|' /etc/apt/sources.list 2>/dev/null || true
+for f in /etc/apt/sources.list.d/*.list; do
+    [ -e "$f" ] || continue
+    sudo sed -i -E 's|^(deb )(\[[^]]*\] )?(http)|\1[arch=amd64] \3|' "$f"
+done
+# Patch deb822 .sources format
+for f in /etc/apt/sources.list.d/*.sources; do
+    [ -e "$f" ] || continue
+    if ! grep -q '^Architectures:' "$f"; then
+        sudo sed -i '/^Types:/a Architectures: amd64' "$f"
+    fi
+done
+# Add arm64 ports sources (auto-detect codename)
 CODENAME=$(. /etc/os-release && echo "$VERSION_CODENAME")
 printf '%s\n' \
     "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports/ ${CODENAME} main restricted universe multiverse" \
