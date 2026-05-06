@@ -31,6 +31,6 @@ bash ../../compile/miniupnpc.sh  "libminiupnpc.a" $1
 bash ../../compile/openssl.sh    "darwin64-arm64-cc" $1
 bash ../../compile/qrencode.sh   "" $1
 bash ../../compile/secp256k1.sh  "" $1
-bash ../../compile/gmp.sh        "" $1
+bash ../../compile/gmp.sh        "--with-pic" $1
 bash ../../compile/qt.sh         "QMAKE_APPLE_DEVICE_ARCHS=arm64" $1
  
