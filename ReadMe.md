@@ -1,6 +1,6 @@
 ## DigitalNote-Builder
 
-This is a project to eazily build the qt-wallet and the deamon staticly.
+This is a project to eazily build the qt-wallet and the daemon staticly.
 
 Follow the instructions for:
 * Windows (32 bits): [windows/x86/ReadMe.md](windows/x86/ReadMe.md)

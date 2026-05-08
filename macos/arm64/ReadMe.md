@@ -29,7 +29,7 @@ This will take a while to compile; take a coffee while this runs.
 Now we can compile the project.
 
 	bash compile_app.sh "-j 4"
-	bash compile_deamon.sh "-j 4"
+	bash compile_daemon.sh "-j 4"
 
 Once the app is created, we can deploy the DigitalNote-QT version.
 
