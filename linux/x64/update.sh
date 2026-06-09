@@ -1,4 +1,10 @@
 #! /usr/bin/env bash
+# Install all apt packages needed for a manual Linux x64 build.
+# Matches the CI's package list (see .github/workflows/ci-linux-x64.yml
+# in DigitalNote-2). Keep these in sync — divergence between manual
+# and CI flows causes mysterious "library X not found" errors that
+# only trigger in one place.
+
 set -e
 
 sudo apt-get update
