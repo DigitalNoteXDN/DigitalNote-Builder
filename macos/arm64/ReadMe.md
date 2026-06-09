@@ -1,4 +1,4 @@
-## Compile for Linux (32 bits)
+## Compile for Macos (64 bits)
 
 First, you get the builder's project.
 
@@ -7,29 +7,33 @@ First, you get the builder's project.
 
 Then download all the library packages.
 
-	./download.sh
+	bash download.sh
 
 When thats executed, you will have a folder called "download" with all the libraries.
 
-Once thats done, we can install the latest apt-get packages.
+Once thats done, we can install the latest brew packages.
 
-	cd linux/x86
-	./update.sh
+	cd macos/x64
+	bash update.sh
 
-Now we have all the libraries we need for the Digitalnote project.
+Now we have all the packages we need for the Digitalnote project.
 
 	git clone https://github.com/DigitalNoteXDN/DigitalNote-2.git
 
 Now that we have everything, we can compile the libraries.
 
-	./compile_libs.sh "-j 4"
+	bash compile_libs.sh "-j 4"
 
 This will take a while to compile; take a coffee while this runs.
 
-Once finished, we can compile the project.
+Now we can compile the project.
 
-	./compile_deamon.sh  "-j 4"
-	./compile_app.sh  "-j 4"
+	bash compile_app.sh "-j 4"
+	bash compile_daemon.sh "-j 4"
+
+Once the app is created, we can deploy the DigitalNote-QT version.
+
+	bash deploy.sh
 
 And thats it! :D
 

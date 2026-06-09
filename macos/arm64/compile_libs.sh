@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-# DigitalNote v2.0.0.7 — macOS Intel (x86_64) library build
+# DigitalNote v2.0.0.7 — macOS Apple Silicon (arm64) library build
 #
 # This compiles all native libraries DigitalNote needs into ./libs/.
 # Run from this directory after ./update.sh (which installs Homebrew deps).
@@ -10,10 +10,10 @@
 #
 # $1 is forwarded to each compile script as the make-args (-j N).
 #
-# Architecture-specific points for x64:
-#   * openssl.sh target = darwin64-x86_64-cc
-#   * qt.sh has no extra flag — Qt 5.15.7's configure defaults to x86_64,
-#     which is correct for Intel macs.
+# Architecture-specific points for arm64:
+#   * openssl.sh target = darwin64-arm64-cc (native Apple Silicon)
+#   * qt.sh extra flag  = QMAKE_APPLE_DEVICE_ARCHS=arm64 (Qt 5.15.7's configure
+#     defaults to x86_64 even on Apple Silicon hosts; this forces native arm64)
  
 mkdir -p temp
 mkdir -p libs
@@ -28,8 +28,9 @@ bash ../../compile/boost.sh      "address-model=64 toolset=clang $1"
 bash ../../compile/leveldb.sh    $1
 bash ../../compile/libevent.sh   "" $1
 bash ../../compile/miniupnpc.sh  "libminiupnpc.a" $1
-bash ../../compile/openssl.sh    "darwin64-x86_64-cc" $1
+bash ../../compile/openssl.sh    "darwin64-arm64-cc" $1
 bash ../../compile/qrencode.sh   "" $1
 bash ../../compile/secp256k1.sh  "" $1
 bash ../../compile/gmp.sh        "--with-pic" $1
-bash ../../compile/qt.sh         "" $1
+bash ../../compile/qt.sh         "QMAKE_APPLE_DEVICE_ARCHS=arm64" $1
+ 

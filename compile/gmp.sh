@@ -2,10 +2,10 @@
 
 cd temp
 
-tar -xjvf ../../../download/gmp-6.2.1.tar.bz2
+tar -xJf ../../../download/gmp-6.3.0.tar.xz
 
-cd gmp-6.2.1
+cd gmp-6.3.0
 
-./configure --prefix=$PWD/../../libs/gmp-6.2.1 $1
+./configure --prefix=$PWD/../../libs/gmp-6.3.0 $1
 make $2
 make install
